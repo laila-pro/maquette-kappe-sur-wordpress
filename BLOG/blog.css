@@ -1,0 +1,314 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: sans-serif;
+  background: #b4b7b8;
+}
+
+/* ---- grid ---- */
+
+.grid {
+  background: #b4b7b8;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 250px;
+  height: min-content;
+  margin: 1rem 1rem 1rem 1rem;
+  image-resolution: from-image;
+}
+
+img {
+  height: 350px;
+}
+/* parametre card */
+.card {
+  border: none;
+}
+.card-bleu {
+  background-color: #1ab5b3;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.card-black {
+  background-color: #242b2e;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.card-aside {
+  background-color: #242b2e;
+  color: #fff;
+  font-size: 0.9rem;
+  border-left: 1em solid #1ab5b3;
+}
+
+.card, .card-bleu, .card-black {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+#grand {
+  font-size: 4rem;
+  height: 3rem;
+}
+
+.text-bleu {
+  color: #1ab5b3;
+}
+.card-body > span {
+  font-size: 0.7rem;
+
+}
+.card-body > span > div > img {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+/* sidebar */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: right;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav .menu:hover {
+  color: #f1f1f1;
+  background-color: #25b0ae;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.logo-box {
+    padding: 30px 30px;
+    background: #fff;
+    text-align: center;
+}
+
+a.logo {
+    display: block;
+    margin-bottom: 10px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+.menu {
+  background-color: #30383c;
+}
+
+#mySidenav ul {
+  list-style-image:none;
+}
+
+.filter-box a {
+  font-size: 0.6rem;
+  text-decoration-style: none;
+}
+
+.filter-box h6 {
+  color: #1ab5b3;
+}
+
+.active, .button:hover {
+  color: #1ab5b3;
+}
+
+.social-bar {
+}
+
+.social-bar .fab {
+  display: inline-block;
+  padding: 5px;
+  font-size: 15px;
+  width: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.social-bar .fab:hover {
+    opacity: 0.7;
+}
+
+.social-bar .fa-facebook-f {
+  width: min-content;
+  background: #3B5998;
+  color: white;
+}
+
+.social-bar .fa-twitter {
+  width: min-content;
+  background: #55ACEE;
+  color: white;
+}
+
+.social-bar .fa-google {
+  width: min-content;
+  background: #dd4b39;
+  color: white;
+}
+
+.social-bar .fa-pinterest {
+  width: min-content;
+  background: #cb2027;
+  color: white;
+}
+
+
+.social-bar .fa-dribbble {
+  width: min-content;
+  background: #ea4c89;
+  color: white;
+}
+
+
+.social-bar .fa-reddit {
+  width: min-content;
+  background: #ff5700;
+  color: white;
+}
+
+.social-bar .fa-flickr {
+  width: min-content;
+  background: #000;
+  color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* button nav */
+#hamburger:hover, #hamburger:focus, .info-box:hover, .info-box:focus {
+  background-color: #1ab5b3;
+  border-radius: 5%;
+  opacity: 0.8;
+  font-size: 60px;
+  transition: all 1s;
+  padding: 1rem;
+  padding-left:1.5rem;
+  padding-right: 1.5rem;
+  color: white;
+  z-index: 8;
+}
+#hamburger, .info-box {
+  font-size: 30px;
+  transition: all 1s;
+  display: block;
+  z-index: 8;
+}
+
+#hamburger {
+position: absolute;
+left: 5px;
+top: 5px;
+}
+.info-box {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+blockquote {
+  font-family: Georgia;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    right: 50%;
+    margin-left: -80px;
+    font-size: 0.7rem;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 90%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+.active {
+    color: #1ab5b3;
+}
