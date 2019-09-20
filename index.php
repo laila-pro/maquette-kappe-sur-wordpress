@@ -1,25 +1,5 @@
 <?php get_header(); ?>
 
-<?php
-
-$args = array(
-'menu_class' => 'nav navnav',
-'menu' => '(your_menu_id)'
-);
-
-wp_nav_menu($args,
-array(
-'theme_location' => 'ul',
-'container' => 'div',
-'container_class' => 'collapse navbar-collapse',
-'container_id' => 'navbarCollapse',
-'menu_class' => 'nav-item',
-'echo' => true,
-'fallback_cb' => 'wp_page_menu',
-'items_wrap' => '<ul class="nav justify-content-end w-100 %2$s">%3$s</ul>',
-'depth' => 0
-));
-?>
 
   <div class="grid">
 
