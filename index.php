@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
   <div class="grid">
 
     <div class="grid-item gallery">
@@ -82,10 +81,10 @@
       </div>
     </div>
   <?php endwhile; else : ?>
-  <p>Sorry, no posts were found!</p>
+  <p>malkit walo!</p>
   <?php endif; ?>
 
-
+<!--
     <div class="grid-item picture">
       <div class="card" id="card">
         <img class="card-img-top" class="-img" src="<?php bloginfo('template_directory'); ?>/img/img_4.jpg" alt="">
@@ -100,7 +99,7 @@
           <span class="d-flex justify-content-between"><div><img src="<?php bloginfo('template_directory'); ?>/img/comments.svg"><a href="#">  comments</a></div><div><img src="<?php bloginfo('template_directory'); ?>/img/calendar.svg"><a href="#">  sept 12, 2019</a></div></span>
         </div>
       </div>
-    </div>
+    </div>-->
     <div class="grid-item aside">
       <div class="card-aside text-white" id="card">
         <div class="card-body">

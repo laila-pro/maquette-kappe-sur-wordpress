@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
   <?php wp_head(); ?>
   <link rel="icon" type="image/png" href="img/development.png">
+
+<?php
+wp_nav_menu();
+?>
 </head>
 
 <body>
