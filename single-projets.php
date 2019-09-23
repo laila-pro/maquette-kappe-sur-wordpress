@@ -1,14 +1,14 @@
 <?php get_header();?>
 <h2> Mes Réalisations <h2>
   <?php
-$projets=new WP_query(array((
+$projets=new WP_query(array(
  'post_type'=>'projets',
  'post_per_page'=>10
 ));
 if ($projets->have_posts()):while($projets->have_posts()):$projets->the_post();?>
 <div class="grid-item standard">
   <div class="card" id="card">
-    <?php the_post_thumbnail( '' ); ?>
+    <?php the_post_thumbnail(); ?>
     <div class="card-body">
       <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
       <p class="text-secondary card-text"><?php the_excerpt(); ?></p>

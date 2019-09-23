@@ -68,7 +68,6 @@
       </div>
     </div>
 
-
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="grid-item standard">
       <div class="card" id="card">
@@ -76,13 +75,17 @@
         <div class="card-body">
           <h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
           <p class="text-secondary card-text"><?php the_excerpt(); ?></p>
-          <span class="d-flex justify-content-between"><div><img src="<?php bloginfo('template_directory'); ?>/img/comments.svg"><a href="#"><?php the_author(); ?></a></div><div><img src="<?php bloginfo('template_directory'); ?>/img/calendar.svg"><a href="#">  <?php the_date(); ?></a></div></span>
+          <span class="d-flex justify-content-between">
+            <div><img src="<?php bloginfo('template_directory'); ?>/img/comments.svg"><a href="#"><?php the_author(); ?></a></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/img/calendar.svg"><a href="#">  <?php the_date(); ?> </a></div>
+          </span>
         </div>
       </div>
     </div>
   <?php endwhile; else : ?>
-  <p>malkit walo!</p>
+  <p>malkite walo!</p>
   <?php endif; ?>
+
 
 <!--
     <div class="grid-item picture">

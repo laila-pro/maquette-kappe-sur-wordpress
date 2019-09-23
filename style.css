@@ -87,7 +87,7 @@ img {
 }
 
 /* sidebar */
-.sidenav {
+.menu {
   height: 100%;
   width: 0;
   position: fixed;
@@ -101,7 +101,7 @@ img {
   text-align: right;
 }
 
-.sidenav a {
+.menu li a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -110,12 +110,12 @@ img {
   transition: 0.3s;
 }
 
-.sidenav .menu:hover {
+.menu .menu:hover {
   color: #f1f1f1;
   background-color: #25b0ae;
 }
 
-.sidenav .closebtn {
+.closebtn {
   position: absolute;
   top: 0;
   right: 25px;
