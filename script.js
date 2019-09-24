@@ -12,9 +12,9 @@ var msnry = new Masonry( '.grid', {
 });
 
 function openNav() {
-  document.getElementById("menu-menu1").style.width = "250px";
+  document.getElementById("sidenav").style.width = "250px";
 }
 
 function closeNav() {
-  document.getElementById("menu-menu1").style.width = "0";
+  document.getElementById("sidenav").style.width = "0";
 }

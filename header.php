@@ -11,15 +11,16 @@
   <?php  wp_head(); ?>
   <link rel="icon" type="image/png" href="img/development.png">
 <!-- menu -->
+<div class="sidenav" id="sidenav">
   <div class="logo-box">
     <a href="https://premiumlayers.net/demo/wp/kappewp" id="logo" class="logo">
       <img src="http://premiumlayers.net/demo/wp/kappewp/wp-content/uploads/2014/02/logo.png" alt="Kappe - Full Screen Portfolio &amp; Blog WP Theme" id="logo-image">
     </a>
   </div>
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<?php
-wp_nav_menu();
-?>
+  <?php wp_nav_menu(); ?>
+</div>
+
 <!-- button info and <nav> -->
 <span style="cursor:pointer;z-index: 3;" id="hamburger" onclick="openNav()">&#9776;</span>
 <span class="info-box"  style="cursor:pointer;z-index: 3;">

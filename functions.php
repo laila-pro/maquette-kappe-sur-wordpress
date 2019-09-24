@@ -12,12 +12,14 @@ function add_CSS() {
     wp_enqueue_style( 'style' );
   }
 add_action('wp_enqueue_scripts', 'add_CSS');
+
+//TODO changer l'ordre de chargement pour que masonry ne soit pas écrasé par bootstrap
 function add_script(){
+  wp_enqueue_script('masonry', "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js", true);
   wp_enqueue_script( 'jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js");
   wp_enqueue_script('ajax', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js");
   wp_enqueue_script('bootstrap',"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js");
   wp_enqueue_script('fontawesome', "https://kit.fontawesome.com/6fee70888d.js");
-  wp_enqueue_script('masonry', "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js");
   wp_enqueue_script('script', get_template_directory_uri().'/script.js');
 }
 
