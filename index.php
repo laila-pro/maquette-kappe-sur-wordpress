@@ -90,16 +90,16 @@
 <!--
     <div class="grid-item picture">
       <div class="card" id="card">
-        <img class="card-img-top" class="-img" src="<?php bloginfo('template_directory'); ?>/img/img_4.jpg" alt="">
+        <img class="card-img-top" class="-img" src="<?php //bloginfo('template_directory'); ?>/img/img_4.jpg" alt="">
       </div>
     </div>
     <div class="grid-item">
       <div class="card standard" id="card">
-        <img class="card-img-top" src="<?php bloginfo('template_directory'); ?>/img/img_5.jpeg" alt="">
+        <img class="card-img-top" src="<?php //bloginfo('template_directory'); ?>/img/img_5.jpeg" alt="">
         <div class="card-body">
           <h4>Standard post format</h4>
           <p class="text-secondary card-text">A man who works with his hands is alaborer; amanwho works with his hand s and his brain is a craftsman; but amanwho works with his</p>
-          <span class="d-flex justify-content-between"><div><img src="<?php bloginfo('template_directory'); ?>/img/comments.svg"><a href="#">  comments</a></div><div><img src="<?php bloginfo('template_directory'); ?>/img/calendar.svg"><a href="#">  sept 12, 2019</a></div></span>
+          <span class="d-flex justify-content-between"><div><img src="<?php //bloginfo('template_directory'); ?>/img/comments.svg"><a href="#">  comments</a></div><div><img src="<?php //bloginfo('template_directory'); ?>/img/calendar.svg"><a href="#">  sept 12, 2019</a></div></span>
         </div>
       </div>
     </div>-->

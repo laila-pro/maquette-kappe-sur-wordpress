@@ -2,7 +2,7 @@
 // This function enqueues the Normalize.css for use. The first parameter is a name for the stylesheet, the second is the URL. Here we
 // use an online version of the css file.
 function add_CSS() {
-    wp_register_style('normalize-styles', "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+    wp_register_style('normalize-styles', "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css", array(), null, false);
     wp_enqueue_style('normalize-styles');
 
     wp_register_style('bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
@@ -15,12 +15,13 @@ add_action('wp_enqueue_scripts', 'add_CSS');
 
 //TODO changer l'ordre de chargement pour que masonry ne soit pas écrasé par bootstrap
 function add_script(){
-  wp_enqueue_script('masonry', "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js", true);
+  wp_deregister_script( 'jquery' ); //on dés-enregistre le jquery intégré à wordpress pour pouvoir utiliser notre version
   wp_enqueue_script( 'jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js");
-  wp_enqueue_script('ajax', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js");
-  wp_enqueue_script('bootstrap',"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js");
-  wp_enqueue_script('fontawesome', "https://kit.fontawesome.com/6fee70888d.js");
-  wp_enqueue_script('script', get_template_directory_uri().'/script.js');
+  wp_enqueue_script( 'ajax', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js");
+  wp_enqueue_script( 'bootstrap',"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js");
+  wp_enqueue_script( 'fontawesome', "https://kit.fontawesome.com/6fee70888d.js" );
+  wp_enqueue_script( 'isotope', "https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js");
+  wp_enqueue_script( 'script', get_template_directory_uri().'/script.js', array('jquery', 'isotope'), null);
 }
 
 add_action( 'wp_enqueue_scripts', 'add_script' );
